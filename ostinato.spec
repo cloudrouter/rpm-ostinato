@@ -14,7 +14,7 @@
 
 Name:           ostinato
 Version:        0.7.1
-Release:        3%{?dist}
+Release:        4%{?dist}
 License:        GPL-3.0+
 Summary:        Packet/Traffic Generator and Analyzer
 Url:            http://code.google.com/p/ostinato/
@@ -24,7 +24,8 @@ Source0:        http://dl.bintray.com/pstavirs/ostinato/%{name}-src-%{version}.t
 BuildRequires:  gcc-c++
 %endif
 BuildRequires:  libpcap-devel
-BuildRequires:  qt4-devel
+BuildRequires:  make
+BuildRequires:  qt-devel
 BuildRequires:  protobuf-devel >= 2.3
 %if 0%{?centos} || 0%{?fedora} || 0%{?rhel}
 Requires:       wireshark
@@ -83,7 +84,9 @@ rm -rf %{buildroot}
 %{_bindir}/ostinato
 
 %changelog
-* Wed Dec 16 2015 Jay Turner <jkt@iix.net>
+* Tue Dec 29 2015 John Siegrist <john@complects.com> - 0.7.1-4
+- Updated project BuildRequires dependencies
+* Wed Dec 16 2015 Jay Turner <jkt@iix.net> - 0.7.1-3
 - Initial build for CloudRouter project
 * Fri Jun 29 2012 asterios.dramis@gmail.com
 - Recommend instead of Require wireshark (not mandatory) for openSUSE and
