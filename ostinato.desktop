@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Ostinato
+GenericName=Network Analyzer
+Comment=Packet/Traffic Generator and Analyzer
+Icon=ostinato
+Exec=/usr/bin/xdg-su -c /usr/bin/ostinato
+Terminal=false
+Categories=Qt;System;Monitor;
